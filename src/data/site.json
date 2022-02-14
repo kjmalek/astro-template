@@ -1,0 +1,22 @@
+{
+    "name": "site name",
+    "themeColor": "#FFFFFF",
+    "icon": {
+        "small": "/assets/icon32.png",
+        "large": "/assets/icon192.png",
+        "apple": "/assets/icon-apple.png"
+    },
+    "title": "Kellen Malek",
+    "description": "default description",
+    "image": {
+        "src": "/assets/image.jpg",
+        "type": "image/jpeg",
+        "alt": "alt text here",
+        "width": 1200,
+        "height": 630
+    },
+    "navigation": [
+        {"name": "item1", "link": "/item1/"},
+        {"name": "item2", "link": "/item2/"}
+    ]
+}

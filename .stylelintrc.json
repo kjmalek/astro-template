@@ -1,0 +1,13 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "overrides": [
+    {
+      "files": ["*.astro", "**/*.astro", "*.svelte", "**/*.svelte"],
+      "customSyntax": "postcss-html"
+    }
+  ],
+  "rules": {
+    "value-keyword-case": null,
+    "at-rule-no-unknown": [true, {"ignoreAtRules": ["tailwind"]}]
+  }
+}
