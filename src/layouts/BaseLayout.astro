@@ -1,0 +1,35 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import BaseHeader from "../components/BaseHeader.astro";
+import site from "../site.config.json";
+
+const { content } = Astro.props;
+
+const meta = {
+  title: content.title,
+  description: content.description,
+  imageSrc: content.imageSrc,
+  imageType: content.imageType,
+  imageAlt: content.imageAlt,
+  imageWidth: content.imageWidth,
+  imageHeight: content.imageHeight,
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead {...meta} />
+  </head>
+  <body>
+    <header>
+      <BaseHeader />
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      &#xA9; 2022 {site.author}
+    </footer>
+  </body>
+</html>

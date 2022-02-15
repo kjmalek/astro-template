@@ -1,0 +1,23 @@
+{
+  "name": "site name",
+  "author": "Author",
+  "themeColor": "#FFFFFF",
+  "icon": {
+    "small": "/assets/icon32.png",
+    "large": "/assets/icon192.png",
+    "apple": "/assets/icon-apple.png"
+  },
+  "title": "Title",
+  "description": "Description",
+  "image": {
+    "src": "/assets/image.webp",
+    "type": "image/webp",
+    "alt": "alt text here",
+    "width": 1200,
+    "height": 630
+  },
+  "navigation": [
+    { "name": "item1", "link": "/item1/" },
+    { "name": "item2", "link": "/item2/" }
+  ]
+}
