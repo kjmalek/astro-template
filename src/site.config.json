@@ -21,8 +21,5 @@
   "socialLinks": [
     { "site": "twitter", "link": "https://twitter.com/" },
     { "site": "github", "link": "https://github.com/" }
-  ],
-  "navigation": [
-    { "name": "About", "link": "/about/" }
   ]
 }

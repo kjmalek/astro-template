@@ -1,14 +1,15 @@
 ---
 import site from "../site.config.json";
+const pages = Astro.fetchContent('../pages/*.md');
 ---
 
 <div>
   <a alt="Home" href="/" class="site-title">{site.title}</a>
   <nav>
     <ul>
-      {site.navigation.map((navItem) => (
+      {pages.filter(page => page.url != '').sort((a, b) => a.navOrder - b.navOrder).map((page) => (
         <li>
-          <a href={navItem.link}>{navItem.name}</a>
+          <a href={page.url}>{page.title}</a>
         </li>
       ))}
     </ul>
