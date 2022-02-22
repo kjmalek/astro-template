@@ -1,14 +1,11 @@
 {
-  "name": "site name",
-  "author": "Author",
-  "themeColor": "#FFFFFF",
-  "icon": {
-    "small": "/assets/icon32.png",
-    "large": "/assets/icon192.png",
-    "apple": "/assets/icon-apple.png"
+  "title": "Your awesome Astro title",
+  "author": {
+    "name": "GitHub User",
+    "email": "your-email@domain.com"
   },
-  "title": "Title",
-  "description": "Description",
+  "description": "Write an awesome description for your new Astro site here. You can edit this line in site.config.json. It will appear in your document head meta (for Google search results) and in your feed.xml site description.",
+  "themeColor": "#FFFFFF",
   "image": {
     "src": "/assets/image.webp",
     "type": "image/webp",
@@ -16,8 +13,17 @@
     "width": 1200,
     "height": 630
   },
+  "icon": {
+    "small": "/assets/icon32.png",
+    "large": "/assets/icon192.png",
+    "apple": "/assets/icon-apple.png"
+  },
+  "socialLinks": {
+    "twitter": null,
+    "github": null
+  },
   "navigation": [
-    { "name": "item1", "link": "/item1/" },
-    { "name": "item2", "link": "/item2/" }
+    { "name": "About", "link": "/about/" },
+    { "name": "HEAD", "link": "/history/" }
   ]
 }

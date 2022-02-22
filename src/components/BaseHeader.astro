@@ -2,13 +2,50 @@
 import site from "../site.config.json";
 ---
 
-<a alt="Home" href="/" class="text-4xl font-bold basis-1/2">{site.title}</a>
-<nav class="basis-1/2">
-  <ul class="flex flex-row gap-5">
-    {site.navigation.map((navItem) => (
-      <li>
-        <a href={navItem.link}>{navItem.name}</a>
-      </li>
-    ))}
-  </ul>
-</nav>
+<div>
+  <a alt="Home" href="/" class="site-title">{site.title}</a>
+  <nav>
+    <ul>
+      {site.navigation.map((navItem) => (
+        <li>
+          <a href={navItem.link}>{navItem.name}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</div>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    align-items: center;
+    min-height: 4rem;
+  }
+
+  .site-title {
+    font-size: 1.625rem;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: -0.05em;
+    flex-basis: 50%;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav {
+    flex-basis: 50%;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1.25rem;
+  }
+</style>

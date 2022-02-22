@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev --experimental-static-build",
+    "dev": "astro dev",
     "format": "prettier --write src/",
     "lint:css": "stylelint src/**/*.{css,astro,svelte}",
     "lint:js": "eslint src/**/*.{js,astro,svelte}",
-    "start": "astro dev --experimental-static-build",
-    "build": "astro build",
+    "start": "astro dev",
+    "build": "astro build --experimental-static-build",
     "preview": "astro preview"
   },
   "devDependencies": {

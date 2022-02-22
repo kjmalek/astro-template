@@ -29,7 +29,39 @@ const meta = {
       <slot />
     </main>
     <footer>
-      &#xA9; 2022 {site.author}
+      &#xA9; 2022 {site.author.name}
     </footer>
   </body>
 </html>
+
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+
+  header {
+    border-bottom: 1px solid gray;
+  }
+
+  main {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+  }
+
+  main :global(h1) {
+    font-size: 5rem;
+  }
+
+  footer {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+</style>

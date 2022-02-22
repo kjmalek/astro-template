@@ -19,12 +19,9 @@ const { canonicalURL } = Astro.request;
 <title>{title}</title>
 <meta name="description" content={description} />
 <meta name="theme-color" content={site.themeColor} />
-<!-- Sitemap -->
 <link rel="sitemap" href="/sitemap.xml" />
-<!-- RSS Feed -->
 <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="RSS" />
 <link rel="canonical" href={canonicalURL} />
-<!-- OpenGraph [Facebook] Metadata -->
 <meta property="og:title" content={title} />
 <meta property="og:type" content="website" />
 <meta property="og:image" content={imageSrc} />
@@ -35,15 +32,10 @@ const { canonicalURL } = Astro.request;
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:description" content={description} />
 <meta property="og:site_name" content={site.name} />
-<!-- Twitter Metadata -->
 <meta name="twitter:card" content="summary_large_image" />
-<!-- Icons -->
 <link rel="icon" href={site.icon.small} sizes="32x32" type="image/png" />
 <link rel="icon" href={site.icon.large} sizes="192x192" type="image/png" />
 <link rel="apple-touch-icon" href={site.icon.apple} />
-<!-- Preload some assets -->
-
-<!-- Stylesheets and Scripts -->
 
 <style global>
   @import "/src/styles/global.css";
