@@ -13,6 +13,9 @@ export default {
   },
   renderers: ["@astrojs/renderer-svelte"],
   vite: {
-    plugins: []
-  }
+    ssr: {
+      external: ["svgo"],
+    },
+    plugins: [],
+  },
 };
