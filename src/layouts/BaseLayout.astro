@@ -1,7 +1,7 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import BaseHeader from "../components/BaseHeader.astro";
-import BaseFooter from "../components/BaseFooter.astro";
+import BaseHead from "@/components/BaseHead.astro";
+import BaseHeader from "@/components/BaseHeader.astro";
+import BaseFooter from "@/components/BaseFooter.astro";
 
 const { content } = Astro.props;
 
@@ -56,6 +56,15 @@ const meta = {
 
   main :global(h1) {
     font-size: 5rem;
+  }
+
+  main :global(a) {
+    color: blue;
+  }
+
+  main :global(a:hover) {
+    color: black;
+    text-decoration: underline;
   }
 
   footer {

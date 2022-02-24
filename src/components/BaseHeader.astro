@@ -1,17 +1,20 @@
 ---
 import site from "../site.config.json";
-const pages = Astro.fetchContent('../pages/*.md');
+const pages = Astro.fetchContent("../pages/*.md");
 ---
 
 <div>
   <a alt="Home" href="/" class="site-title">{site.title}</a>
   <nav>
     <ul>
-      {pages.filter(page => page.url != '').sort((a, b) => a.navOrder - b.navOrder).map((page) => (
-        <li>
-          <a href={page.url}>{page.title}</a>
-        </li>
-      ))}
+      {pages
+        .filter((page) => page.url !== "" && page.url !== "/404")
+        .sort((a, b) => a.navOrder - b.navOrder)
+        .map((page) => (
+          <li>
+            <a href={page.url}>{page.title}</a>
+          </li>
+        ))}
     </ul>
   </nav>
 </div>

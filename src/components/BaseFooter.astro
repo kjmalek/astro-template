@@ -1,88 +1,108 @@
 ---
-import site from '../site.config.json';
-import { Icon } from 'astro-icon';
+import site from "../site.config.json";
+import { Icon } from "astro-icon";
 ---
+
 <div class="wrapper">
-    <div class="contact">
-        <a href="/feed.xml"><Icon name="fa-solid:rss" title="RSS Feed" width="18" /><span>Subscribe</span></a>
-        <ul>
-            <li class="author">{site.author.name}</li>
-            <li>
-                <a href={`mailto:${site.author.email}`}>{site.author.email}</a>
-            </li>
-        </ul>
-    </div>
-    <div class="description">
-        <p>{site.description}</p>
-    </div>
+  <div class="contact">
+    <a href="/feed.xml"
+      ><Icon name="fa-solid:rss" title="RSS Feed" width="18" /><span
+        class="link">Subscribe</span
+      ></a
+    >
+    <ul>
+      <li class="author">{site.author.name}</li>
+      <li>
+        <a href={`mailto:${site.author.email}`}>{site.author.email}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="description">
+    <p>{site.description}</p>
+  </div>
 </div>
 <ul class="social">
-    {site.socialLinks.map((socialLink) => (
-        <li class="link"><a href={socialLink.link} title={socialLink.site}><Icon name={`akar-icons:${socialLink.site}-fill`} width="24"/></a></li>
-    ))}
+  {site.socialLinks.map((socialLink) => (
+    <li>
+      <a href={socialLink.link} title={socialLink.site}>
+        <Icon
+          name={`akar-icons:${socialLink.site}-fill`}
+          title={socialLink.site}
+          width="24"
+        />
+      </a>
+    </li>
+  ))}
 </ul>
 
 <style>
-    .wrapper {
-        display: flex;
-        flex-direction: row;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 
-    .contact {
-        flex-basis: 50%;
-    }
+  .contact {
+    flex-basis: 50%;
+  }
 
-    .author {
-        padding-top: 20px;
-    }
+  a span:hover {
+    color: black;
+    text-decoration: underline;
+  }
 
-    .wrapper a {
-        color: blue;
-    }
+  .author {
+    padding-top: 20px;
+    color: gray;
+  }
 
-    .wrapper a:hover {
-        color: black;
-        text-decoration: underline;
-    }
+  .wrapper a {
+    color: blue;
+  }
 
-    [astro-icon="fa-solid:rss"] {
-        color: orange;
-        display: inline-block;
-        position: relative;
-        bottom: 0.25rem;
-        padding-right: 1px;
-    }
+  .contact li a:hover {
+    color: black;
+    text-decoration: underline;
+  }
 
-    .author {
-        color: gray;
-    }
+  .link:hover {
+    color: black;
+    text-decoration: underline;
+  }
 
-    .description {
-        flex-basis: 50%;
-        color: gray;
-    }
+  [astro-icon="fa-solid:rss"] {
+    color: orange;
+    display: inline-block;
+    position: relative;
+    bottom: 0.25rem;
+    padding-right: 1px;
+  }
 
-    .social {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 1.25rem;
-        max-width: 800px;
-        margin-right: auto;
-        margin-left: auto;
-        padding-bottom: 20px;
-    }
+  .description {
+    flex-basis: 50%;
+    color: gray;
+  }
 
-    .social li {
-        color: gray;
-    }
+  .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.25rem;
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 20px;
+  }
 
-    .social li:hover {
-        color: black;
-    }
+  .social li {
+    color: gray;
+  }
+
+  .social li:hover {
+    color: black;
+  }
 </style>

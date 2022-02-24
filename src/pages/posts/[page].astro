@@ -1,0 +1,24 @@
+---
+import site from "../../site.config.json";
+
+export async function getStaticPaths({ rss, paginate }) {
+  const allPosts = Astro.fetchContent("./*.md");
+  const sortedPosts = allPosts.sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
+  rss({
+    title: site.title,
+    stylesheet: false,
+    description: site.description,
+    customData: `<language>en-us</language>`,
+    items: sortedPosts.map((item) => ({
+      title: item.title,
+      description: item.description,
+      link: item.url,
+      pubDate: item.date,
+    })),
+    dest: "/feed.xml",
+  });
+  return paginate(sortedPosts, { pageSize: 10 });
+}
+---
