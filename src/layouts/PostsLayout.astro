@@ -1,0 +1,24 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const { content } = Astro.props;
+---
+
+<BaseLayout {content}>
+  <h1>{content.title}</h1>
+  <date class="date">{new Date(content.date).toDateString()}</date>
+  <slot />
+</BaseLayout>
+
+<style>
+  :global(pre) {
+    background-color: bisque;
+  }
+
+  .date {
+    display: block;
+    color: gray;
+    padding-top: 5px;
+    padding-bottom: 20px;
+  }
+</style>

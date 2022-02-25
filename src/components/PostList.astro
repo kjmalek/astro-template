@@ -1,0 +1,33 @@
+---
+const posts = Astro.fetchContent("../pages/posts/*.md");
+const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+---
+
+<div>
+  {sortedPosts.map((post) => (
+    <article>
+      <date class="date">{new Date(post.date).toDateString()}</date>
+      <h2>
+        <a href={post.url}>{post.title}</a>
+      </h2>
+    </article>
+  ))}
+</div>
+
+<style>
+  div {
+    margin-top: 40px;
+  }
+
+  .date {
+    color: gray;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  article {
+    margin-bottom: 20px;
+  }
+</style>

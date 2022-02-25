@@ -1,5 +1,5 @@
 ---
-layout: "@/layouts/BaseLayout.astro"
+layout: "@/layouts/PostsLayout.astro"
 title: Super Short Article
 description: description for super short article
 date: 2022-02-22

@@ -1,0 +1,14 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PostList from "@/components/PostList.astro";
+import { Markdown } from "astro/components";
+
+const { content } = Astro.props;
+---
+
+<BaseLayout {content}>
+  <Markdown content={content.astro.source}>
+
+  </Markdown>
+  <PostList />
+</BaseLayout>

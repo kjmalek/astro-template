@@ -1,9 +1,8 @@
 ---
-layout: "@/layouts/BaseLayout.astro"
+layout: "@/layouts/IndexLayout.astro"
 ---
 
-# Welcome to my simple Astro template
+# Welcome to Astro Minima
 
-This template is a copy of the Jekyll Minima theme, but rebuilt to use the Astro SSG instead.
-
+This template is a copy of the Jekyll Minima theme, but rebuilt using Astro.  
 By default, this theme includes support for Svelte components and Tailwind CSS.
